@@ -12,7 +12,7 @@ protocol DetailPresenterDelegate:AnyObject {
     func showViewEditContact(for contact:CNContact)
 }
 class DetailPresenter{
-    private let view:DetailView
+    private weak var view:DetailView?
     private var model:CNContact
     weak var delegate:DetailPresenterDelegate?
     
@@ -28,7 +28,7 @@ class DetailPresenter{
         let name = "Name: \(model.givenName)"
         let phoneNumber = "Phone: \(model.phoneNumbers.first?.value.stringValue ?? "")"
         let emailNumber = "Email: \(model.emailAddresses.first?.value ?? "")"
-        view.updateViewWithData(name: name, phone: phoneNumber, email: emailNumber)
+        view?.updateViewWithData(name: name, phone: phoneNumber, email: emailNumber)
         
     }
     

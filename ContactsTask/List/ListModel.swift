@@ -19,7 +19,17 @@ class ListModel {
     init() {
         store = CNContactStore()
     }
-    
+
+    func deleteItem(at index:Int){
+        let request = CNSaveRequest()
+        let contact = items[index].mutableCopy() as! CNMutableContact
+        let store = CNContactStore()
+        request.delete(contact)
+        if let _ = try? store.execute(request){
+            items.remove(at: index)
+            presenter?.modelUpdated()
+        }
+    }
     func fetchData() {
         let request = CNContactFetchRequest(keysToFetch: [CNContactGivenNameKey as CNKeyDescriptor, CNContactPhoneNumbersKey as CNKeyDescriptor, CNContactEmailAddressesKey as CNKeyDescriptor])
         var result:[CNContact] = []

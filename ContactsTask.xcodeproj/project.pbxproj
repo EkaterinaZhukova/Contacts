@@ -72,23 +72,55 @@
 		C4776137219840BE00E99616 /* ContactsTask */ = {
 			isa = PBXGroup;
 			children = (
+				C4FEE5B0219CB9040080D1A8 /* Add */,
+				C4FEE5AF219CB8EF0080D1A8 /* Edit */,
+				C4FEE5AB219CB8B70080D1A8 /* Detail */,
+				C4FEE5A7219CB8780080D1A8 /* List */,
 				C4776138219840BE00E99616 /* AppDelegate.swift */,
 				C477613A219840BE00E99616 /* ViewController.swift */,
 				C477613C219840BE00E99616 /* Main.storyboard */,
 				C477613F219840BF00E99616 /* Assets.xcassets */,
 				C4776141219840BF00E99616 /* LaunchScreen.storyboard */,
 				C4776144219840BF00E99616 /* Info.plist */,
-				C4FEE552219B0DFD0080D1A8 /* ListView.swift */,
-				C4FEE554219B0F210080D1A8 /* ListModel.swift */,
-				C4FEE556219B0F3D0080D1A8 /* ListPresenter.swift */,
-				C4FEE558219B115E0080D1A8 /* DetailPresenter.swift */,
-				C4FEE55A219B116B0080D1A8 /* DetailView.swift */,
-				C4FEE55C219B16BC0080D1A8 /* EditView.swift */,
-				C4FEE55E219B17100080D1A8 /* EditPresenter.swift */,
-				C4FEE5A0219CA8A00080D1A8 /* AddContactPresenter.swift */,
-				C4FEE5A2219CA96A0080D1A8 /* AddView.swift */,
 			);
 			path = ContactsTask;
+			sourceTree = "<group>";
+		};
+		C4FEE5A7219CB8780080D1A8 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C4FEE556219B0F3D0080D1A8 /* ListPresenter.swift */,
+				C4FEE554219B0F210080D1A8 /* ListModel.swift */,
+				C4FEE552219B0DFD0080D1A8 /* ListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C4FEE5AB219CB8B70080D1A8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C4FEE55A219B116B0080D1A8 /* DetailView.swift */,
+				C4FEE558219B115E0080D1A8 /* DetailPresenter.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C4FEE5AF219CB8EF0080D1A8 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				C4FEE55E219B17100080D1A8 /* EditPresenter.swift */,
+				C4FEE55C219B16BC0080D1A8 /* EditView.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		C4FEE5B0219CB9040080D1A8 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				C4FEE5A2219CA96A0080D1A8 /* AddView.swift */,
+				C4FEE5A0219CA8A00080D1A8 /* AddContactPresenter.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

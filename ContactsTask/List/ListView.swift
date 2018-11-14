@@ -35,17 +35,18 @@ class ListView: UIViewController {
         self.list = list
         self.tableView.reloadData()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateTableView(){
+        self.tableView.reloadData()
     }
-    */
+    func showAlertView(with mistake:String){
+        let alert = UIAlertController(title: "Something went wrong", message: mistake, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
 
+    deinit {
+        print("ListView deinit")
+    }
 }
 
 extension ListView:UITableViewDataSource{
@@ -65,5 +66,13 @@ extension ListView:UITableViewDataSource{
 extension ListView:UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.openItemAt(index: indexPath.row)
+    }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == .delete){
+          presenter?.deleteItem(at: indexPath.row)
+        }
     }
 }

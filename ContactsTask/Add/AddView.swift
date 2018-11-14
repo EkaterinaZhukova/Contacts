@@ -34,5 +34,9 @@ class AddView: UIViewController {
             presenter?.succeedSave()
         }
     }
+    
+    deinit {
+        print("AddView deinit")
+    }
 
 }

@@ -45,4 +45,9 @@ class ListPresenter {
     func openViewAddContact(){
         delegate?.showAddView()
     }
+    func deleteItem(at position:Int){
+        model.deleteItem(at: position)
+        
+    }
+
 }

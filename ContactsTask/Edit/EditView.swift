@@ -39,5 +39,8 @@ class EditView: UIViewController {
         self.phoneTextField.text = phone
         self.emailTextField.text = email
     }
+    deinit {
+        print("Edit View deinit")
+    }
 
 }
