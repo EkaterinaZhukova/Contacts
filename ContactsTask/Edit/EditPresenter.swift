@@ -30,27 +30,14 @@ class EditPresenter{
         let email = contact.emailAddresses.first?.value ?? ""
         view?.updateViewWith(name: name, phone: phone, email: email as String)
     }
+    func checkContact(name:String?,phone:String?,email:String?) -> Bool{
+        let validator = Validator()
+        if(validator.validateContact(contactName: name, contactPhone: phone, contactEmail: email,contact: contact) == false){
+            return false
+        }
+        return true
+    }
     func updateContact(name:String?,phone:String?,email:String?) -> Bool{
-        let previousName = contact.givenName
-        let previousPhone = contact.phoneNumbers.first?.value.stringValue ?? ""
-        let previousEmail = contact.emailAddresses.first?.value ?? ""
-        if(phone == nil || name == nil || email == nil){
-            return false
-        }
-        if(phone == "" && email == ""){
-            return false
-        }
-        if(previousName == name && phone == previousPhone && email == (previousEmail as String)){
-            return false
-        }
-        if(email != "" && email?.contains("@") == false){
-            return false
-        }
-        if(CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: phone!)) == false){
-            return false
-        }
-
-        
         if let mutableContact = contact.mutableCopy() as? CNMutableContact{
             mutableContact.givenName = name!
             mutableContact.phoneNumbers[0] = CNLabeledValue(label: CNLabelHome, value: CNPhoneNumber(stringValue: phone!))

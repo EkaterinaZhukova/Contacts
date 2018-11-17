@@ -98,7 +98,8 @@ extension AppDelegate:DetailPresenterDelegate{
 extension AppDelegate:EditPresenterDelegate{
     func contactWasEditedSuccessfully(newModel:CNContact) {
         detailPresenter?.setModel(for: newModel)
-        mainNavigationController.popViewController(animated: true)
+        mainNavigationController.popViewController(animated: false)
+        self.mainNavigationController.popViewController(animated: true)
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C43B68F821A0061100596B79 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B68F721A0061100596B79 /* Validator.swift */; };
 		C4776139219840BE00E99616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4776138219840BE00E99616 /* AppDelegate.swift */; };
 		C477613B219840BE00E99616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C477613A219840BE00E99616 /* ViewController.swift */; };
 		C477613E219840BE00E99616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C477613C219840BE00E99616 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C43B68F721A0061100596B79 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		C4776135219840BE00E99616 /* ContactsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4776138219840BE00E99616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C477613A219840BE00E99616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		C4776137219840BE00E99616 /* ContactsTask */ = {
 			isa = PBXGroup;
 			children = (
+				C43B68F721A0061100596B79 /* Validator.swift */,
 				C4FEE5B0219CB9040080D1A8 /* Add */,
 				C4FEE5AF219CB8EF0080D1A8 /* Edit */,
 				C4FEE5AB219CB8B70080D1A8 /* Detail */,
@@ -198,6 +201,7 @@
 				C477613B219840BE00E99616 /* ViewController.swift in Sources */,
 				C4FEE55F219B17100080D1A8 /* EditPresenter.swift in Sources */,
 				C4FEE5A1219CA8A00080D1A8 /* AddContactPresenter.swift in Sources */,
+				C43B68F821A0061100596B79 /* Validator.swift in Sources */,
 				C4FEE55D219B16BC0080D1A8 /* EditView.swift in Sources */,
 				C4776139219840BE00E99616 /* AppDelegate.swift in Sources */,
 				C4FEE5A3219CA96A0080D1A8 /* AddView.swift in Sources */,
